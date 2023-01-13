@@ -18,41 +18,81 @@ function setNextQuestion() {
     showQuestion(questions[currentQuestionIndex]);
 }
 function showQuestion(question) {
-    questionTitleElement.innerText = question.question;
-    for(i=0; i < questions.length; i++){
+    questionTitleElement.innerText = questionsArray[0].question;
+    for (i = 0; i < questions.length; i++) {
         var ans = questions[i];
         console.log(ans.answer);
-        if (ans.correct = "correct"){
+        if (ans.correct = "correct") {
             button.dataset.correct = ans.correct
         }
     }
-    /*question.answers.forEach(answer => {
-        const button = document.createElement("button");
-        button.innerText = answer.text;
-        button.classList.add("button");
-        if (answer.correct) {
-            button.dataset.correct = answer.correct;
-        }
-        button.addEventListener("click", selectAnswer);
-        choicesElement.appendChild(button);
-    })*/
+    //Function To Render My Answers// 
+    function showAnswer(questionsArray) {
+        console.log(questionsArray)
+    }
+    showAnswer(questionsArray)
 }
 
 function selectAnswer() {
 
-
 }
 
+var question1 =
+{
+    question: "Fav sport",
+    answer: [
+        { text: 'Football', correct: true },
+        { text: "Golf", correct: false },
+        { text: "BasketBall", correct: false },
+        { text: "Rugby", correct: false }
+    ]
+}
 
+var question2 =
+{
+    question: " Fav colour",
+    answer: [
+        { text: "Blue", correct: true },
+        { text: "Green", correct: false },
+        { text: "Red", correct: false },
+        { text: "Purple", correct: false },
+    ]
+}
 
-var questions = [
-    {
-        question: " Fav word",
-        answer: [
-            { text: 'It is a .........................', correct: true },
-            { text: " it is a ........", correct: false }
+var question3 =
+{
+    question: " Fav colour",
+    answer: [
+        { text: "Blue", correct: true },
+        { text: "Green", correct: false },
+        { text: "Red", correct: false },
+        { text: "Purple", correct: false },
+    ]
+}
 
-        ]
-    }
-]
+var question4 =
+{
+    question: " Fav colour",
+    answer: [
+        { text: "Blue", correct: true },
+        { text: "Green", correct: false },
+        { text: "Red", correct: false },
+        { text: "Purple", correct: false },
+    ]
+}
 
+var question5 =
+{
+    question: " Fav colour",
+    answer: [
+        { text: "Blue", correct: true },
+        { text: "Green", correct: false },
+        { text: "Red", correct: false },
+        { text: "Purple", correct: false },
+    ]
+}
+
+var questionsArray =
+    [
+        question1, question2, question3, question4, question5
+    ]
